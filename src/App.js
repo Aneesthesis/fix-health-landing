@@ -8,26 +8,23 @@ import { Footer } from "./Components/Footer";
 
 function App() {
   return (
-    <div className="relative">
+    <div>
       <Navbar />
 
-      <div className="relative w-screen h-screen">
-        <img src={hero} className="w-full h-full object-cover" alt="hero" />
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-          <div className="flex flex-col items-center justify-center w-1/2 p-8 text-white text-center">
-            <h1 className="text-4xl font-bold mb-4">
-              Book an Appointment for Rs 1000 FREE
-            </h1>
-            <p className="text-xl mb-6">
-              60+ Expert Physiotherapists for 200+ Conditions
-            </p>
-            <img src={patientsRecovery} alt="Patients Recovery" />
-          </div>
+      <div className="relative flex">
+        <img src={hero} className="w-full h-screen object-cover" alt="hero" />
+        <div className="absolute right-5 bottom-60 w-full md:w-1/2 mx-auto md:left-auto p-8 text-white text-center">
+          <h1 className="text-4xl font-bold mb-4">
+            Book an Appointment for Rs 1000 FREE
+          </h1>
+          <p className="text-xl mb-6">
+            60+ Expert Physiotherapists for 200+ Conditions
+          </p>
+          <img src={patientsRecovery} alt="Patients Recovery" />
         </div>
-      </div>
-
-      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-full md:w-[400px] mx-auto md:left-8">
-        <BookingForm />
+        <div className="absolute bottom-20">
+          <BookingForm />
+        </div>
       </div>
 
       <div className="mt-8">
